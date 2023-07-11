@@ -1,0 +1,8 @@
+.nav-transflo{
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    flex-direction: row;
+    gap: 25px;
+}

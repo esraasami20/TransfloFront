@@ -1,0 +1,33 @@
+
+<div class="m-4 exportData">
+    <a class="btn btn-success" [routerLink]="['/new']">+</a>
+    <input value="Export Data" class="btn btn-primary" (click)="this.downloadCSV()" type="button"/>
+</div>
+
+<table class="table text-center table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th  colspan="2"> ... </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let driver of drivers;">
+            <td>{{driver.firstName}} {{driver.lastName}}</td>
+            <td>{{driver.email}}</td>
+            <td>{{driver.phoneNumber}}</td>
+            <td colspan="2">
+                <button class="btn btn-out-let-warning" (click)="this.GetDriverById(driver.driverId)">
+                    <img src="../../../assets/Images/edit.png" alt="" style="height: 20px;"/>
+                </button>
+
+                <button class="btn btn-out-let-warning" (click)="this.DeleteDriver(driver.driverId)">
+                    <img src="../../../assets/Images/del.png" alt="" style="height: 20px;"/>
+                </button>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>

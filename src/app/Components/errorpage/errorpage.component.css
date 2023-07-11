@@ -1,0 +1,8 @@
+.upper-face{
+    display: flex;
+    justify-content: space-evenly;
+}
+.element{
+    font-size: 200px;
+    color: darkred;
+}

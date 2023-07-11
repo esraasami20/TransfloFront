@@ -1,0 +1,5 @@
+.exportData{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+}

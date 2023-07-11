@@ -1,0 +1,26 @@
+<form name="Form" #Form>
+  <div class="row m-5">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name" 
+       name="firstName" id="firstName" #firstName>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name" 
+       name="lastName" id="lastName" #lastName>
+    </div>
+  </div>
+  <div class="row m-5">
+      <div class="col">
+        <input type="email" class="form-control" placeholder="Driver Email"
+         name="email" id="email" #email>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="phone Number" 
+        name="phoneNumber" id="phoneNumber" #phoneNumber>
+      </div>
+  </div>
+  <div class="row mx-5 text-center">
+      <input type="button" value="Submit" class="offset-5 btn btn-primary w-25" 
+      (click)="this.CreateDriver(firstName.value, lastName.value, email.value, phoneNumber.value)"/>
+  </div>
+</form>

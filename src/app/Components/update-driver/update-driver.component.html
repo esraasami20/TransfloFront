@@ -1,0 +1,26 @@
+<form name="Form" #Form class="form-group">
+    <div class="row m-5">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="First name" required
+        value={{CurrentDriver?.firstName}} name="firstName" id="firstName" #firstName>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Last name" required
+        value={{CurrentDriver?.lastName}} name="lastName" id="lastName" #lastName>
+      </div>
+    </div>
+    <div class="row m-5">
+        <div class="col">
+          <input type="email" class="form-control" placeholder="Driver Email" required
+           value={{CurrentDriver?.email}} name="email" id="email" #email>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="phone Number" required
+          value={{CurrentDriver?.phoneNumber}} name="phoneNumber" id="phoneNumber" #phoneNumber>
+        </div>
+    </div>
+    <div class="row mx-5 text-center">
+        <input type="button" value="Submit" class="btn btn-primary offset-4 w-25" 
+        (click)="this.UpdateDriver(firstName.value, lastName.value, email.value, phoneNumber.value)"/>
+    </div>
+</form>
